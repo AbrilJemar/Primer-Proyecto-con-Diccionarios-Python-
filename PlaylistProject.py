@@ -35,9 +35,6 @@ def Add_Songs():
                     Song = input('Invalid name. Try again: ')
                 
                 Playlist['Songs'].append(Song)
-                Playlist_name = Playlist['Playlist']  
-                Songs = Playlist['Songs']
-                print(f'\r\nThe playlist "{Playlist_name}" contains: "{Songs}"')
                 
             case 'No':
                 if Playlist['Songs'] == []:
@@ -46,8 +43,13 @@ def Add_Songs():
                     
                 else: 
                     Playlist_name = Playlist['Playlist']  
-                    Songs = Playlist['Songs']
-                    print(f'\r\nSongs in the playlist "{Playlist_name}": "{Songs}"')
+                    print(f'\r\nPlaylist "{Playlist_name}"')
+                    print('Songs:')
+                    Accountant = 0
+                    
+                    for Song in Playlist['Songs']:
+                        Accountant = Accountant + 1
+                        print(str(Accountant) + '. ' + Song)
                 
                 Add_Song = False
             case _:
