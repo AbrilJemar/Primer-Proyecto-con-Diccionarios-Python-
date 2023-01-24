@@ -31,6 +31,7 @@ def Add_Songs():
         match Pregunta:
             case 'Yes':
                 Song = input('\r\nEnter the song name: ')
+                
                 while (Song.strip() ==  ""):
                     Song = input('Invalid name. Try again: ')
                 
@@ -63,6 +64,7 @@ while Stay:
     Add_Songs()
     
     while Stay: 
+        
         Exit = input('\r\nDo you want to save the playlist and exit? (Yes/No): ')
         if (isinstance(Exit, str)):
             Exit = Exit.capitalize()   
